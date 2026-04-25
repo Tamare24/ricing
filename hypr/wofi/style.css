@@ -1,0 +1,18 @@
+window {
+    background-color: #151617;
+    color: #ffffff;
+    border: 2px solid #ff5e5e;
+    border-radius: 10px;
+    font-family: "JetBrains Mono";
+}
+#input {
+    background-color: #1e1e1e;
+    color: #ff5e5e;
+    border: none;
+    margin: 10px;
+}
+#entry:selected {
+    background-color: #ff5e5e;
+    color: #151617;
+}
+

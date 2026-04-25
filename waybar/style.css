@@ -1,43 +1,56 @@
 * {
     border: none;
-    font-family: "JetBrains Mono", "Symbols Nerd Font Mono", "Font Awesome 6 Free";
-    font-size: 14px;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
 }
 
 window#waybar {
-    background: rgba(15, 15, 15, 0.7); /* Hitam transparan */
-    color: #ff5e5e; /* Merah-oranye biar senada sama border */
-    border-bottom: 2px solid #ff5e5e;
-}
-
-#clock, #battery, #cpu, #memory {
-    padding: 0 12px;
-    margin: 4px 2px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
+    background: rgba(21, 22, 23, 0.9);
+    color: #cdd6f4;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: #555555;
+    padding: 0 5px;
+    color: #585b70;
 }
 
 #workspaces button.active {
-    color: #ffaa00; /* Oranye menyala */
-    border-bottom: 2px solid #ffaa00;
+    color: #ffaa00; /* Oranye Amber */
 }
 
-#battery.charging {
-    color: #ffa500; /* Oranye terang biar kelihatan lagi ngisi */
-    border-bottom: 2px solid #ffa500;
+#workspaces button.focused {
+    color: #ff5e5e; /* Oranye Red */
+    background: #313244;
 }
 
+#clock, #battery, #pulseaudio, #network, #bluetooth, #tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+}
+
+/* Warna Spesifik Modul */
+#clock { color: #89b4fa; }
+
+#battery { color: #a6e3a1; }
+#battery.charging { color: #ffa500; } /* Pas dicas jadi oranye */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+}
+
+#pulseaudio { color: #f9e2af; }
+#network { color: #cba6f7; }
+#bluetooth { color: #89dceb; }
+
+#tray {
+    margin-right: 10px;
+}
+
+#custom-launcher {
+    font-size: 20px;
+    color: #1793d1; /* Warna biru khas Arch Linux */
+    padding-left: 10px;
+    padding-right: 15px;
 }
